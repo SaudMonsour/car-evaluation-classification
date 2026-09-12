@@ -1,0 +1,8 @@
+column,dtype,missing,unique,role
+buying,object,0,4,feature
+maintenance,object,0,4,feature
+doors,object,0,4,feature
+persons,object,0,3,feature
+luggage,object,0,3,feature
+safety,object,0,3,feature
+acceptability,object,0,4,target

@@ -1,0 +1,152 @@
+{
+  "task": "classification",
+  "primary_metric": "macro_f1",
+  "higher_is_better": true,
+  "selected_model": "Random forest",
+  "leaderboard": [
+    {
+      "model": "Random forest",
+      "cv_mean": 0.768500955642253,
+      "cv_std": 0.0191266168727698,
+      "fold_scores": [
+        0.7953601822438432,
+        0.7523004815961473,
+        0.7578422030867683
+      ],
+      "selection_score": 0.768500955642253
+    },
+    {
+      "model": "Logistic regression",
+      "cv_mean": 0.7378305334411744,
+      "cv_std": 0.05284060024432559,
+      "fold_scores": [
+        0.7435785378642521,
+        0.6704320096495794,
+        0.7994810528096918
+      ],
+      "selection_score": 0.7378305334411744
+    },
+    {
+      "model": "Dummy baseline",
+      "cv_mean": 0.20595743086506635,
+      "cv_std": 0.00026203768453170374,
+      "fold_scores": [
+        0.20561941251596424,
+        0.2059948979591837,
+        0.2062579821200511
+      ],
+      "selection_score": 0.20595743086506635
+    }
+  ],
+  "test_metrics": {
+    "Random forest": {
+      "accuracy": 0.9624277456647399,
+      "macro_f1": 0.8880563797125226,
+      "balanced_accuracy": 0.8588797566070294
+    },
+    "Dummy baseline": {
+      "accuracy": 0.6994219653179191,
+      "macro_f1": 0.20578231292517007,
+      "balanced_accuracy": 0.25
+    }
+  },
+  "confidence_interval": {
+    "low": 0.8118872678381881,
+    "high": 0.9457284336058049,
+    "repeats": 200,
+    "method": "Percentile bootstrap on fixed-model holdout predictions; stratified by class for classification",
+    "limitation": "Conditional on this fitted model and split; excludes training/model-selection uncertainty"
+  },
+  "train_metrics": {
+    "accuracy": 0.9985528219971056,
+    "macro_f1": 0.9947897666059473,
+    "balanced_accuracy": 0.9951962809917356
+  },
+  "train_rows": 1382,
+  "test_rows": 346,
+  "selection_used_test": false,
+  "warnings": [],
+  "parameters": {
+    "Dummy baseline": {
+      "constant": null,
+      "random_state": null,
+      "strategy": "most_frequent"
+    },
+    "Logistic regression": {
+      "C": 1.0,
+      "class_weight": null,
+      "dual": false,
+      "fit_intercept": true,
+      "intercept_scaling": 1,
+      "l1_ratio": 0.0,
+      "max_iter": 1500,
+      "n_jobs": null,
+      "penalty": "deprecated",
+      "random_state": 42,
+      "solver": "lbfgs",
+      "tol": 0.0001,
+      "verbose": 0,
+      "warm_start": false
+    },
+    "Random forest": {
+      "bootstrap": true,
+      "ccp_alpha": 0.0,
+      "class_weight": null,
+      "criterion": "gini",
+      "max_depth": 14,
+      "max_features": "sqrt",
+      "max_leaf_nodes": null,
+      "max_samples": null,
+      "min_impurity_decrease": 0.0,
+      "min_samples_leaf": 2,
+      "min_samples_split": 2,
+      "min_weight_fraction_leaf": 0.0,
+      "monotonic_cst": null,
+      "n_estimators": 100,
+      "n_jobs": 1,
+      "oob_score": false,
+      "random_state": 42,
+      "verbose": 0,
+      "warm_start": false
+    }
+  },
+  "per_class": {
+    "acc": {
+      "precision": 0.8928571428571429,
+      "recall": 0.974025974025974,
+      "f1-score": 0.9316770186335404,
+      "support": 77.0
+    },
+    "good": {
+      "precision": 0.8461538461538461,
+      "recall": 0.7857142857142857,
+      "f1-score": 0.8148148148148148,
+      "support": 14.0
+    },
+    "unacc": {
+      "precision": 0.9916666666666667,
+      "recall": 0.9834710743801653,
+      "f1-score": 0.9875518672199171,
+      "support": 242.0
+    },
+    "vgood": {
+      "precision": 1.0,
+      "recall": 0.6923076923076923,
+      "f1-score": 0.8181818181818182,
+      "support": 13.0
+    },
+    "accuracy": 0.9624277456647399,
+    "macro avg": {
+      "precision": 0.9326694139194139,
+      "recall": 0.8588797566070294,
+      "f1-score": 0.8880563797125226,
+      "support": 346.0
+    },
+    "weighted avg": {
+      "precision": 0.964102564102564,
+      "recall": 0.9624277456647399,
+      "f1-score": 0.9617643160282474,
+      "support": 346.0
+    }
+  }
+}

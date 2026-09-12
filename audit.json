@@ -1,0 +1,18 @@
+{
+  "original_rows": 1728,
+  "original_features": 6,
+  "missing_cells": 0,
+  "missing_by_column": {
+    "buying": 0,
+    "maintenance": 0,
+    "doors": 0,
+    "persons": 0,
+    "luggage": 0,
+    "safety": 0,
+    "acceptability": 0
+  },
+  "missing_target_rows_removed": 0,
+  "excluded_columns": [],
+  "exact_duplicates_removed": 0,
+  "usable_rows": 1728
+}
